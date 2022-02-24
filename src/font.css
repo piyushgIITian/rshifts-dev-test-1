@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Source+Code+Pro:wght@500&family=Tomorrow&display=swap');
 
 .font-poppins {
     font-family: 'Poppins', sans-serif;
@@ -6,4 +7,8 @@
 
 .background-gray{
     background-color: #E5E5E5;
+}
+
+.font-tomorrow{
+    font-family: 'Tomorrow', sans-serif;
 }

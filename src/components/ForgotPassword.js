@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Button, Card, Alert, Image } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
 
@@ -28,17 +28,20 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <Card>
+      <div className="text-center">
+        <Image src="/logogroup.png"/ >
+      </div>
+      <Card className="shadow p-3 mb-5 bg-white " style={{borderRadius: "20px"}}>
         <Card.Body>
-          <h2 className="text-center mb-4">Password Reset</h2>
+          <h2 className="text-center mb-4" style={{fontSize: '22px', fontWeight: 'bold'}}>Password Reset</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              
+              <Form.Control type="email" placeholder="Email" ref={emailRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button disabled={loading} className="w-100" type="submit" style={{ background: "#7962F5", borderRadius: "10px", height: "41px"}}>
               Reset Password
             </Button>
           </Form>
