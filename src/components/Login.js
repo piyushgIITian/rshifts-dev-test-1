@@ -34,7 +34,7 @@ export default function Login() {
       <div className="text-center">
         <Image src="/logogroup.png"/ >
       </div>
-      <Card className="shadow p-3 mb-5 bg-white rounded-lg">
+      <Card className="shadow p-3 mb-5 bg-white " style={{borderRadius: "20px"}}>
         <Card.Body>
           <h2 className="text-center mb-4 " style={{fontSize: '22px', fontWeight: 'bold'}}>Sign in</h2>
           {error && <Alert variant="danger">{error}</Alert>}

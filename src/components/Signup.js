@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Button, Card, Alert, Image } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
@@ -33,8 +33,11 @@ export default function Signup() {
   }
 
   return (
-    <>
-      <Card className="shadow p-3 mb-5 bg-white rounded-lg">
+    <div>
+      <div className="text-center">
+        <Image src="/logogroup.png"/ >
+      </div>
+      <Card className="shadow p-3 mb-5 bg-white" style={{borderRadius: "20px"}}>
         <Card.Body style={{borderRadius: "20px"}}>
           <h2 className="text-center mb-4" style={{fontSize: '22px', fontWeight: 'bold'}}>Get your free RGear !</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -63,6 +66,6 @@ export default function Signup() {
       <div className="w-100 text-center mt-2">
         Already have an account? <Link to="/login">Log In</Link>
       </div>
-    </>
+    </div>
   )
 }
