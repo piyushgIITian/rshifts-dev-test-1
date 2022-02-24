@@ -8,12 +8,14 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
+import "../font.css"
 
 function App() {
   return (
+    <div className="background-gray font-poppins">
     <Container
       className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "100vh"}}
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
         <Router>
@@ -22,13 +24,17 @@ function App() {
               <PrivateRoute exact path="/" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
+              <div className="background-gray">
               <Route path="/login" component={Login} />
+              </div>
+
               <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
           </AuthProvider>
         </Router>
       </div>
     </Container>
+    </div>
   )
 }
 

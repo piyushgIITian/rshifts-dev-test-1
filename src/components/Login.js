@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Button, Card, Alert, Image } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import "../font.css"
 
 export default function Login() {
   const emailRef = useRef()
@@ -27,23 +28,31 @@ export default function Login() {
   }
 
   return (
-    <>
-      <Card>
+    
+    
+    <div className="font-poppins" >
+      <div className="text-center">
+        <Image src="/logogroup.png"/ >
+      </div>
+      <Card className="shadow p-3 mb-5 bg-white rounded-lg">
         <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h2 className="text-center mb-4 " style={{fontSize: '22px', fontWeight: 'bold'}}>Sign in</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+            <Form.Group id="email" className="mb-4"   >
+              
+              <Form.Control type="email" placeholder="Email Address" style={{height: "45px"}} ref={emailRef} required />
             </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+            <Form.Group id="password" className="mb-4" >
+              
+              <Form.Control type="password" style={{height: "45px"}} placeholder="Password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <div className="text-center ">
+            <Button disabled={loading} className="px-3" style={{ background: "#7962F5", borderRadius: "10px", width: "121px", height: "41px"}} type="submit">
               Log In
             </Button>
+            </div>
+
           </Form>
           <div className="w-100 text-center mt-3">
             <Link to="/forgot-password">Forgot Password?</Link>
@@ -51,8 +60,9 @@ export default function Login() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+      <Link to="/signup">Sign Up!!</Link> And Get your free RGear
       </div>
-    </>
+    </div>
+    
   )
 }

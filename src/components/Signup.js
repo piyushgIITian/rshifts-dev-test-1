@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom"
 
 export default function Signup() {
   const emailRef = useRef()
+
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
   const { signup } = useAuth()
@@ -33,26 +34,29 @@ export default function Signup() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+      <Card className="shadow p-3 mb-5 bg-white rounded-lg">
+        <Card.Body style={{borderRadius: "20px"}}>
+          <h2 className="text-center mb-4" style={{fontSize: '22px', fontWeight: 'bold'}}>Get your free RGear !</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+
+            <Form.Group id="email" className="mb-4" >
+              
+              <Form.Control type="email" style={{height: "45px"}} placeholder = "Email" ref={emailRef} required />
             </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+            <Form.Group id="password" className="mb-4" >
+              
+              <Form.Control type="password" style={{height: "45px"}} placeholder = "Password" ref={passwordRef} required />
             </Form.Group>
-            <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control type="password" ref={passwordConfirmRef} required />
+            <Form.Group id="password-confirm" className="mb-4" >
+              
+              <Form.Control type="password" style={{height: "45px"}} placeholder = "Confirm Password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <div className="text-center ">
+            <Button disabled={loading} className="px-3" style={{ background: "#7962F5", borderRadius: "10px" , width: "121px", height: "41px"}} type="submit">
               Sign Up
             </Button>
+            </div>
           </Form>
         </Card.Body>
       </Card>
