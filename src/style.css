@@ -32,7 +32,7 @@
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #0087ca;
+    color: #7962F5;
   }
   
   .hover-underline-animation:after {
@@ -40,10 +40,10 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: #7962F5;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
