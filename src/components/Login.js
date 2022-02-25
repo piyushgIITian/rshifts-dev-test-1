@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert, Image } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import "../font.css"
+import "../style.css"
 
 export default function Login() {
   const emailRef = useRef()
@@ -48,7 +48,7 @@ export default function Login() {
               <Form.Control type="password" style={{height: "45px"}} placeholder="Password" ref={passwordRef} required />
             </Form.Group>
             <div className="text-center ">
-            <Button disabled={loading} className="px-3" style={{ background: "#7962F5", borderRadius: "10px", width: "121px", height: "41px"}} type="submit">
+            <Button disabled={loading} className="px-3" id="rs-button" type="submit">
               Log In
             </Button>
             </div>

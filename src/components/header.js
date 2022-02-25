@@ -1,35 +1,36 @@
 import React from 'react'
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap"
-import "../font.css"
+import { Navbar, Nav, Button} from "react-bootstrap"
+import "../style.css"
 
-export default function header() {
+
+export default function Header(props) {
   return (
-    <div>
-        <Navbar bg="light" expand="lg" style={{paddingLeft:"0px"}} >
-            <Container>
-                <Navbar.Brand href="#home" className="font-tomorrow" ><img
+    <div id="header-class">
+        <Navbar bg="light" expand="lg"className="py-3"   >
+            
+                <Navbar.Brand href="/" className="font-tomorrow" style={{marginLeft:"101px", fontWeight:"bold"}}><img
           alt=""
           src="/rsLogo.svg"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />{' '}RShifts</Navbar.Brand>
+          width="50"
+          height="50"
+          style={{marginRight: "5px"}}
+          className="d-inline-block"
+        />RShifts</Navbar.Brand>
+                
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end" style={{marginRight:"101px"}}>
+                <Nav>
+                    <Nav.Link href="/" id="header-tabs" className="hover-underline-animation">HOME</Nav.Link>
+                    <Nav.Link href="#aboutus" id="header-tabs" className="hover-underline-animation">ABOUT US</Nav.Link>
+                    <Nav.Link href="#contactus" id="header-tabs" className="hover-underline-animation">CONTACT US</Nav.Link>
+                    <Button onclick={()=>props.buttonFunc()} className="px-3" id="rs-button-1" type="submit">
+                       {props.buttonText}
+                    </Button>
+                    
                 </Nav>
                 </Navbar.Collapse>
-            
-            </Container>
+                 
+           
         </Navbar>
     </div>
   )

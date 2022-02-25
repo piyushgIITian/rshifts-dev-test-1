@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import Header from "../components/header"
+import Header from "../components/Header"
 
 export default function Dashboard() {
   const [error, setError] = useState("")
@@ -22,7 +22,8 @@ export default function Dashboard() {
 
   return (
     <>
-      <Header/>
+      <Header buttonFunc={handleLogout} buttonText={"Log out"}/>
+    
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>

@@ -41,7 +41,7 @@ export default function ForgotPassword() {
               
               <Form.Control type="email" placeholder="Email" ref={emailRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit" style={{ background: "#7962F5", borderRadius: "10px", height: "41px"}}>
+            <Button disabled={loading} className="w-100" type="submit" id="rs-button">
               Reset Password
             </Button>
           </Form>

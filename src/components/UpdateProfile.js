@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Button, Card, Alert, Image } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
@@ -43,9 +43,12 @@ export default function UpdateProfile() {
 
   return (
     <>
-      <Card>
+      <div className="text-center">
+        <Image src="/logogroup.png"/ >
+      </div>
+      <Card className="shadow p-3 mb-5 bg-white" style={{borderRadius: "20px"}}>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+          <h2 className="text-center mb-4" style={{fontSize: '22px', fontWeight: 'bold'}}>Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -73,7 +76,7 @@ export default function UpdateProfile() {
                 placeholder="Leave blank to keep the same"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button disabled={loading} className="w-100" id="rs-button" style={{width:"100px"}} type="submit">
               Update
             </Button>
           </Form>

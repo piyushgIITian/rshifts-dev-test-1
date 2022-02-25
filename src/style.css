@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Source+Code+Pro:wght@500&family=Tomorrow&display=swap');
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-gray{
+    background-color: #E5E5E5;
+}
+
+.font-tomorrow{
+    font-family: 'Tomorrow', sans-serif;
+}
+
+#rs-button-1{
+    background: #7962F5;
+    border-radius: 10px; 
+    width: 121px;
+    height: 41px; 
+    margin-left: 50px;
+    margin-right: 20px;
+}
+#rs-button{
+    background: #7962F5;
+    border-radius: 10px; 
+    width: 121px;
+    height: 41px; 
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+#header-tabs{
+   color: black;
+   font-weight: 500; 
+   margin-left:50px;
+   margin-right:50px;
+}
+
+#header-class{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}

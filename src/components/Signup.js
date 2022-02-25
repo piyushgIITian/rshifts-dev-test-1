@@ -56,7 +56,7 @@ export default function Signup() {
               <Form.Control type="password" style={{height: "45px"}} placeholder = "Confirm Password" ref={passwordConfirmRef} required />
             </Form.Group>
             <div className="text-center ">
-            <Button disabled={loading} className="px-3" style={{ background: "#7962F5", borderRadius: "10px" , width: "121px", height: "41px"}} type="submit">
+            <Button disabled={loading} className="px-3" id="rs-button" type="submit">
               Sign Up
             </Button>
             </div>
