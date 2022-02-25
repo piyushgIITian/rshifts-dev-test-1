@@ -8,6 +8,9 @@
 .background-gray{
     background-color: #E5E5E5;
 }
+.background-white{
+    background-color: white;
+}
 
 .font-tomorrow{
     font-family: 'Tomorrow', sans-serif;
@@ -59,7 +62,3 @@
    margin-right:50px;
 }
 
-#header-class{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
-}
